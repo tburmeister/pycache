@@ -114,5 +114,5 @@ def run(port: int=5555, num_nodes: int=1, on_miss: OnMissFunc=None):
 
 if __name__ == '__main__':
     # Just for testing
-    run(num_nodes=3)
+    run(num_nodes=1)
 

@@ -20,7 +20,7 @@ class Client(object):
 
     def _key_url(self, key: str):
         # TODO: consistent hashing
-        idx = hash(key) % self.num_nodes
+        idx = sum(map(ord, key[:4])) % self.num_nodes
         return '{}/{}'.format(self.nodes[idx], key)
 
     def get(self, key: str):

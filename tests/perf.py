@@ -1,11 +1,11 @@
 import time
+import uuid
 
 from threading import Thread
 from pycache.client import Client
 
-exit = False
-keys = 'abcdefghijklmnopqrstuvwxyz'
-len_keys = len(keys)
+len_keys = 100
+keys = [str(uuid.uuid4()) for i in range(len_keys)]
 num_workers = 10
 
 
